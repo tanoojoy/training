@@ -1,8 +1,9 @@
 fastapi==0.115.0
 uvicorn==0.30.6
 pillow>=10.4.0
-numpy>=2.2.0          # NumPy 2.x for Python 3.13
-torch==2.7.1          # Choose one that pip shows as available
-torchvision==0.22.1   # Must match torch 2.7.x
-scikit-learn>=1.6.1   # 1.6+ supports Python 3.13
+numpy>=2.2.0
+torch==2.7.1
+torchvision==0.22.1
+scikit-learn>=1.6.1
 joblib==1.4.2
+python-multipart==0.0.9
