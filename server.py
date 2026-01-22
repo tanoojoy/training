@@ -116,5 +116,5 @@ async def predict(file: UploadFile = File(...), clf: str = Query("ann", enum=["a
         with torch.no_grad():
             logits = ann_model(torch.from_numpy(z.astype(np.float32)).to(DEVICE))
             probs = torch.softmax(logits, dim=1).cpu().numpy()[0]
-
+    print(topk(probs, k=min(5, len(inv_labels))))
     return {"top": topk(probs, k=min(5, len(inv_labels))), "raw": probs.tolist()}
