@@ -15,8 +15,8 @@ from typing import Dict, List
 
 # ---------- Config ----------
 PCA_PATH = os.getenv("PCA_PATH", "pca.pkl")
-RF_PATH  = os.getenv("RF_PATH",  "model.pkl")       # RandomForest (optional)
-ANN_PATH = os.getenv("ANN_PATH", "ann_model.pt")    # ANN (optional)
+RF_PATH  = os.getenv("RF_PATH",  "model.pkl")
+ANN_PATH = os.getenv("ANN_PATH", "ann_model.pt")
 LABELS_PATH = os.getenv("LABELS_PATH", "labels.json")
 IMAGE_SIZE = 224  # must match training
 DEVICE = torch.device("cpu")  # keep CPU for portability
